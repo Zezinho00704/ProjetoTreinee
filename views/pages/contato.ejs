@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head'); %>
+     <link rel="stylesheet" href="./contato.css">
+
+<body>
+    <%- include('../partials/header'); %> 
+
+    <main id="body">
+        <section id="intro">
+            <h1 class="title">Contato</h1>
+            <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus quis augue elementum
+                vestibulum. Nam a orci erat. Aenean arcu mauris, finibus a rutrum quis, commodo sollicitudin nibh. Morbi
+                diam lacus, suscipit nec maximus et, tincidunt at quam.
+
+                Curabitur sit amet euismod mi. Duis dictum vel ipsum vel tempus. Etiam diam nisl, feugiat ornare enim
+                ac, aliquam ultrices erat. Nam tincidunt cursus dui. Integer varius nisi quis dui commodo, vitae euismod
+                nisi elementum. Vivamus tincidunt id massa eget blandit.</p>
+        </section>
+
+        <section id="intro2">
+            <h3 id="info">INFORMAÇÕES PARA CONTATO</h3>
+            <div class="divs">
+                <img class="icons" src="Icone1.png" alt="teste">
+                <p class="desc">Endereço</p>
+            </div>
+            <p class="minip">Av. Tancredo Neves, 2227, Ed. Salvador Prime Caminho das Árvores, Salvador • Bahia</p>
+            <div class="divs">
+                <img class="icons" src="Icone2.png" alt="teste">
+                <p class="desc"> Telefone</p>
+            </div>
+            <p class="minip">(71) 9 9999-9999 | (11) 1 1111-1111</p>
+
+            <div class="divs">
+                <img class="icons" src="Icone3.png" alt="teste">
+                <p class="desc">Suporte</p>
+            </div>
+            <p class="minip">suporte@cubos.academy</p>
+        </section>
+
+        <section id="intro3">
+            <h3 id='contact'>ENTRE EM CONTATO</h3>
+            <form action="/contato" method="POST" id="form-contato">
+                <label for="nome" class="group">Nome</label>
+                <input type="text" id="nome" name="nome" class="inps">
+                <label for="email" class="group">Email</label>
+                <input type="email" id="email" name="email" class="inps">
+                <label for="assunto" class="group">Assunto</label>
+                <input type="text" id="assunto" name="assunto" class="inps">
+                <div id="textarea">
+                    <label for="comentario" class="group">Comentário</label>
+                    <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+                </div>
+                <button class="b" type="submit" form="form-contato" title="salvar envio">Enviar</button>
+            </form>
+            
+            </form>
+        </section>
+
+        <%- include('../partials/menu'); %> 
+    </main>
+
+    <%- include('../partials/footer'); %> 
+
+</body>
+
+</html>

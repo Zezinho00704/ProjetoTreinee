@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <%- include('../partials/head'); %> 
+
+<body>
+
+    <%- include('../partials/header'); %> 
+
+    <main id="body">
+        <div class="content" class="<%= qualitys.categoria %>" data-id="<%= qualitys.id %> ">
+            <h1 class="title"><%= qualitys.titulo %> </h1>
+            <span class="details"><%= qualitys.data %> </span>
+           <img class="post-thumbnail" src="<%= qualitys.img %>" alt="teste">
+            <p class="p"><%= qualitys.texto %> </p>
+        
+        </div>
+        <form id="form-coment" action="/post/<%= qualitys.id %>" method="POST">
+            <h2 class="titulocoment">Comentarios</h2>
+            <input id="inp2" type="text" placeholder="    Nome" id="name" name="name">
+            <input id="inp" type="text" placeholder="    Email" id="email" name="email">
+            <input id="comentario" type="text" placeholder="    Escreva" id="comentario" name="comentario">
+            <button class="b2" type="submit" form="form-coment" title="salvar comentarios">Comentar</button>
+        </form>
+        
+        
+        <!-- comentarios do site -->
+        
+            <% if(qualitys.comentarios[0] != undefined){
+                console.log(qualitys.comentarios.length)
+                for (let i = 0; i < qualitys.comentarios.length; i++) { %>
+                    <div class="content3">
+                  <p class="p2"><%= qualitys.comentarios[i].name %>:</p> 
+                  <p class="p3"><%= qualitys.comentarios[i].comentario %></p>  
+                </div> 
+                
+          <% } } %>
+
+
+        
+
+        <%- include('../partials/menu'); %> 
+    </main>
+
+    <%- include('../partials/footer'); %> 
+
+</body>
+
+</html>

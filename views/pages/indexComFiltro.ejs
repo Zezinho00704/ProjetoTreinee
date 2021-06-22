@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <%- include('../partials/head'); %> 
+
+<body>
+
+    <%- include('../partials/header'); %> 
+
+    <main id="body">
+        <% qualitys.forEach(function(listaFiltrada){  %>
+            <div class="content" class="<%= listaFiltrada.categoria %>" data-id="<%= listaFiltrada.id %> ">
+            <h1 class="title"><%= listaFiltrada.titulo %> </h1>
+            <span class="details"><%= listaFiltrada.data %> </span>
+           <a href="/post/<%= listaFiltrada.id %>"><img class="post-thumbnail" src="<%= listaFiltrada.img %> " alt="teste"></a> 
+            <p class="p"><%= listaFiltrada.texto %> </p>
+            <a class="linkb" href="/post/<%= listaFiltrada.id %>"><button class="b">Continuar Lendo</button></a> 
+        </div> 
+       <% }) %> 
+
+        <%- include('../partials/menu'); %> 
+    </main>
+
+    <%- include('../partials/footer'); %> 
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <%- include('../partials/head'); %> 
+
+<body>
+    
+    <%- include('../partials/header'); %> 
+
+    <main id="body">
+        <% qualitys.forEach(function(listaDePosts){  %>   
+            <div class="content" class="<%= listaDePosts.categoria %>" data-id="<%= listaDePosts.id %> ">
+            <h1 class="title"><%= listaDePosts.titulo %> </h1>
+            <span class="details"><%= listaDePosts.data %> </span>
+           <a href="/post/<%= listaDePosts.id %>"><img class="post-thumbnail" src="<%= listaDePosts.img %> " alt="teste"></a> 
+            <p class="p"><%= listaDePosts.texto %> </p>
+            <a class="linkb" href="/post/<%= listaDePosts.id %>"><button class="b">Continuar Lendo</button></a> 
+        </div> 
+       <% }) %> 
+
+        <%- include('../partials/menu'); %> 
+    </main>
+
+    <%- include('../partials/footer'); %> 
+
+</body>
+
+</html>

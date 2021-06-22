@@ -1,0 +1,5 @@
+criar /config/database.json
+
+dar require do data.base no controlador e criar rota nos controladores 
+
+criar banco de dados
