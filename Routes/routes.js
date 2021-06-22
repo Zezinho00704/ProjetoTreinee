@@ -1,18 +1,28 @@
 const express = require('express');
-const controladores = require('../Controllers/controladores');
+const {controladores, home, consultaPost, contato, filtro, sobre, criaComentContato, criaComent, pesquisa} = require('../Controllers/controladores');
 
 const routes = express();
 
 //mostrando HOME
-routes.get("/",controladores.home);
+routes.get("/",home);
 
 //Abrindo posts individuais  
-routes.get("/post/:idConsultado",controladores.consultaPost);
+routes.get("/post/:idConsultado",consultaPost);
 
-routes.post("/post/:idConsultado",controladores.criaComent);
+// page contato
+routes.get("/contato",contato);
 
-routes.get("/contato",controladores.contato);
+//filtro de categorias
+routes.get("/categoria/:categoriaConsultada",filtro);
 
-routes.get("/categoria/:categoriaConsultada",controladores.filtro);
+//page sobre
+routes.get("/sobre",sobre);
+
+//comentários da page contato
+routes.post("/contato",criaComentContato);
+
+//comentários dos posts
+routes.post("/post/:idConsultado",criaComent);
+
 module.exports = routes;
 

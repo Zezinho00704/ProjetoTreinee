@@ -22,9 +22,12 @@ const listaDePosts = [{
     img: "http://localhost:8080/img2.png",
     texto: " asdasifhauhfgdsaffsafasus ",
     data: " safsaassssssssssssssssssssssssssssssssssssssfsg sa",
-    categoria: "Tecnologia",
+    categoria: "Arte",
     comentarios:[]
-}]
-let listaFiltrada = []
+}];
 
-module.exports = {listaDePosts,listaFiltrada}
+let listaFiltrada = [];
+
+let comentsContato = [];
+
+module.exports = {listaDePosts,listaFiltrada, comentsContato};
